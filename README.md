@@ -1,6 +1,6 @@
 # String Vault - Text Encryption & Decryption App
 
-SecureVault is a Flutter application designed to provide users with an unparalleled level of data security and privacy. Offering a seamless blend of SQFlite, Encrypt, and Provider packages, this app empowers users to encrypt, store, and decrypt sensitive information effortlessly, ensuring confidentiality and peace of mind.
+SecureVault is a Flutter application designed to provide users with an easy and secure way  to encrypt and store their text data.
 
 ## Features
 
