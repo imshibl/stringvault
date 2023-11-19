@@ -45,11 +45,16 @@ class _HomeViewState extends State<HomeView> {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                Provider.of<DataProvider>(context, listen: false)
-                    .encryptAndSave(plainTextEditingController.text);
-                plainTextEditingController.clear();
-                FocusScope.of(context).unfocus();
-                showSnackBar("Text is encrypted and saved", context);
+                if (plainTextEditingController.text.isNotEmpty) {
+                  Provider.of<DataProvider>(context, listen: false)
+                      .encryptAndSave(plainTextEditingController.text);
+                  plainTextEditingController.clear();
+                  FocusScope.of(context).unfocus();
+                  showSnackBar("Text is encrypted and saved", context);
+                } else {
+                  showSnackBar(
+                      "Please enter a text to encrypt and save", context);
+                }
               },
               child: const Text('Encrypt and Save'),
             ),
