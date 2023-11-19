@@ -15,7 +15,14 @@ class AppTheme {
       ),
     ),
     inputDecorationTheme: const InputDecorationTheme(
-        hintStyle: TextStyle(color: ConstColors.tealAccent),
-        focusColor: ConstColors.tealAccent),
+      labelStyle: TextStyle(color: ConstColors.tealAccent),
+      focusColor: ConstColors.tealAccent,
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: ConstColors.tealAccent),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ConstColors.tealPrimary),
+      ),
+    ),
   );
 }
